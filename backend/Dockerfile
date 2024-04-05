@@ -1,5 +1,5 @@
 # Node.js의 공식 이미지를 기반으로 설정
-FROM node:14
+FROM node:16
 
 # 앱 디렉토리 생성
 WORKDIR /usr/src/app
