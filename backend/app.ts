@@ -5,7 +5,13 @@ import userRoutes from "./router/userRoutes.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect("mongodb://root:example@mongo:27017/mydatabase");
+mongoose.connect(
+  "mongodb://root:example@mongo:27017/mydatabase?authSource=admin"
+);
+
+app.get("/health", (req, res) => {
+  res.status(200).send({ status: "UP" });
+});
 
 app.use(express.json()); // JSON 요청 본문 파싱
 app.use(userRoutes); // 라우트 사용
