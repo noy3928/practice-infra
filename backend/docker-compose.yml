@@ -7,9 +7,9 @@ services:
       - /usr/src/app/node_modules
     ports:
       - "3000:3000"
-    command: npm run dev
+    command: npm start
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     depends_on:
       - mongo
 

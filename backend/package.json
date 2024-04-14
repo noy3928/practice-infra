@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/app.js",
     "dev": "nodemon --exec 'npm run build && node dist/app.js' --watch src"
   },
   "keywords": [],
